@@ -1,6 +1,7 @@
 import {TestBed} from '@angular/core/testing';
 import {AppComponent} from './app.component';
 import {fireEvent, render, screen} from "@testing-library/angular";
+import {TodoListComponent} from "./todo-list/todo-list.component";
 
 describe('AppComponent', () => {
   beforeEach(async () => {
@@ -28,7 +29,9 @@ describe('AppComponent', () => {
 describe('todo list 테스트', () => {
   it('해야할 아이템을 입력한 후 저장할 수 있다.', async () => {
     // when
-    await render(AppComponent,)
+    await render(AppComponent, {
+      declarations: [TodoListComponent]
+    })
 
     // then
     const input = screen.getByPlaceholderText('add an item')

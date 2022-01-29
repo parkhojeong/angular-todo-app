@@ -9,7 +9,5 @@
   </label>
   <button (click)="addItem(newItem.value); newItem.value = ''">Add</button>
 
-  <ul>
-    <li *ngFor="let item of items">{{item.description}}</li>
-  </ul>
+  <app-todo-list [items]="items" ></app-todo-list>
 </main>
