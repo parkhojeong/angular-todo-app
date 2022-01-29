@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {TodoItem} from "./todo-item";
+import {TodoService} from "./todo-list/todo.service";
 
 @Component({
   selector: 'app-root',
@@ -9,17 +9,14 @@ import {TodoItem} from "./todo-item";
 export class AppComponent {
   title = 'angular-todo-app';
 
-  allItems: TodoItem[] = [
-    {description: 'eat', done: true},
-    {description: 'sleep', done: false},
-  ];
+  constructor(private todoListService: TodoService) {
+  }
 
   get items() {
-    return this.allItems;
+    return this.todoListService.getItems()
   }
 
   addItem(description: string) {
-    const newItem: TodoItem = {description, done: false};
-    this.allItems = [newItem, ...this.allItems];
+    this.todoListService.addItem(description);
   }
 }
