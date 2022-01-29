@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {TodoItem} from "../todo-item";
 
 @Injectable({
@@ -6,12 +6,10 @@ import {TodoItem} from "../todo-item";
 })
 export class TodoService {
 
-  constructor() { }
+  constructor() {
+  }
 
-  allItems: TodoItem[] = [
-    {description: 'eat', done: true},
-    {description: 'sleep', done: false},
-  ];
+  allItems: TodoItem[] = [];
 
   getItems() {
     return this.allItems;
