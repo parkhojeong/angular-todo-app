@@ -1,13 +1,4 @@
 <main>
-  <h1>My To Do List</h1>
 
-  <label >What would you like to do today?
-    <input
-      #newItem
-      placeholder="add an item"
-    />
-  </label>
-  <button (click)="addItem(newItem.value); newItem.value = ''">Add</button>
-
-  <app-todo-list [items]="items" ></app-todo-list>
+  <app-todo></app-todo>
 </main>
