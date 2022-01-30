@@ -1,7 +1,7 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 import {TodoComponent} from './todo.component';
 import {fireEvent, render, screen} from "@testing-library/angular";
-import {TodoListComponent} from "../todo-list/todo-list.component";
+import {TodoListComponent} from "./todo-list/todo-list.component";
 
 describe('TodoComponent', () => {
   let component: TodoComponent;

@@ -1,7 +1,7 @@
 import {TestBed} from '@angular/core/testing';
 import {AppComponent} from './app.component';
 import {fireEvent, render, screen} from "@testing-library/angular";
-import {TodoListComponent} from "./todo-list/todo-list.component";
+import {TodoListComponent} from "./todo/todo-list/todo-list.component";
 import {TodoComponent} from "./todo/todo.component";
 
 describe('AppComponent', () => {
